@@ -1,3 +1,6 @@
-<?php
-include './includes/header.php';
+<?php 
 
+$titulo = '';
+include'./includes/header.php'; 
+
+?>
