@@ -59,3 +59,5 @@ include './includes/header.php'
 
         </main>
     </section>
+
+    <?php include './includes/footer.php' ?>
