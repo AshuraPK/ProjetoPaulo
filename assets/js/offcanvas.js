@@ -1,12 +1,14 @@
-function abrirNav(){
-    const menu = document.getElementById("offcanvas");
-    // selecione um elemento atraves do ID
-    menu.style.width = "250px"
-    console.log(menu)
+function abrirNav() {
+    let offcanvas = document.getElementById("offcanvas");
+    let overlay = document.getElementById("overlay");
+    offcanvas.style.width = "250px";
+    overlay.style.width = "100%";
+}
+function fecharNav() {
+    let offcanvas = document.getElementById("offcanvas");
+    let overlay = document.getElementById("overlay");
+    offcanvas.style.width = "0";
+    overlay.style.width = "0";
 }
 
-function fecharNav(){
-    const menu = document.getElementById("offcanvas");
-    // selecione um elemento atraves do ID
-    menu.style.width = "0"
-}
+document.getElementById("overlay").addEventListener("click", fecharNav);
