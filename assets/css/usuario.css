@@ -9,9 +9,9 @@
 }
 
 .btn-roxo{
-    background-color: #D966BA;
-    border: solid #210D26 2px;
-    color: #000000;
+    background-color: #D966BA !important;
+    border: solid #210D26 2px !important;
+    color: #000000 !important;
 }
 
 .btn-roxo:hover, .select{
