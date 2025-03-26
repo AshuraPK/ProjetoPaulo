@@ -1,7 +1,7 @@
  
 <div class="row">
     <!-- variavel $_SESSION criada no usuario-login, preciso avisar que tem uma sessao ativa;  -->
-    <h4 class="identificacao">Bem vindo: <?= $_SESSION['nome'] ?></h4>
+    <h4 class="identificacao">Bem vindo: <?php echo $_SESSION['nome'] ?></h4>
 </div>
 <div class="row">
     <div class="col d-flex justify-content-between">

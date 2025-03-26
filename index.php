@@ -6,9 +6,8 @@ include './includes/header.php';
 include './includes/banner.php';
 
 $filmes = new Filmes();
-$dados = $filmes->listarFilmesBanco();
+$dadosFilmes = $filmes->exibirListaFilmes(12);
 
-echo $dados;
 
 include './includes/filme_lista.php';
 

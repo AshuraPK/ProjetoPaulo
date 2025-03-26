@@ -1,5 +1,5 @@
 <?php
-
+require './classes/Filmes.php';
 include './includes/header.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'GET' && !empty($_GET) && $_GET['sair'] == 'true') {
@@ -12,6 +12,8 @@ if (empty($_SESSION['id_pessoa']) && !isset($_SESSION) ) {
 
 }
 
+$filme = New Filmes();
+$resultadoConsultaFilmes = $filme->exibirListaFilmes();
 ?>
 <section id="usuario-principal">
     <main class="container usuario-principal">

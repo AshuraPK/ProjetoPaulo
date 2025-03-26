@@ -3,9 +3,10 @@
         <main class="container">
             <div class="row">
         
-            <?php { 
+            <?php foreach ($dadosFilmes as $value){ 
                 include './includes/filme_card.php';
             } ?>
+            
             </div>
         </main>
     </section>

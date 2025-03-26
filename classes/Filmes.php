@@ -1,14 +1,24 @@
 <?php
 
-class Filmes {
-    function listarFilmesBanco ()
-    {
-        //codigo...
-        //codigo...
-        //codigo...
-        return 'dadinho';
-    }
+//classe precisa ter letra maiuscula para identificar que É uma classe 
+class Filmes
+{
+    public function exibirListaFilmes($limite =''){
 
+        $dsn = 'mysql:dbname=db_cinebox;host=127.0.0.1';
+        $user = 'root';
+        $password = '';
+        $auxScript = '';
+        $banco = new PDO($dsn, $user, $password);
+      
+        if (!empty($limite)) {
+        $auxScript = " ORDER BY RAND() LIMIT {$limite}";
+        }
+
+        $script = 'SELECT * FROM tb_filmes' . $auxScript;
+
+      return  $dados = $banco->query ($script)->fetchALL();
+    }
 
 
 }
