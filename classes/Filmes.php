@@ -20,5 +20,4 @@ class Filmes
       return $banco->query($script)->fetchAll();
     }
 
-
 }
