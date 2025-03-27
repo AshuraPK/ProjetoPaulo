@@ -1,5 +1,7 @@
 <?php 
 require './classes/Filmes.php';
+require'./classes/Generos.php';
+//require é uma requisição de importancia, mais importante que meu include  
 
 $titulo = '';
 include'./includes/header.php';
@@ -7,7 +9,10 @@ include'./includes/header.php';
 $filme = new Filmes ();
 $dadosFilmes = $filme->exibirListaFilmes();
 
-include'./includes/filme_lista.php';
+$bob = new Generos();
+$dadosGeneros = $bob->consultarListaGeneros();
+
+include'./includes/filmes_filtro.php';
 include'./includes/footer.php';
 
 ?>

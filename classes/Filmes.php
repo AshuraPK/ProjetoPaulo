@@ -17,7 +17,7 @@ class Filmes
 
         $script = 'SELECT * FROM tb_filmes' . $auxScript;
 
-      return  $dados = $banco->query ($script)->fetchALL();
+      return $banco->query($script)->fetchAll();
     }
 
 

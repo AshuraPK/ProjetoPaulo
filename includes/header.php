@@ -25,6 +25,8 @@
         <link rel="stylesheet" href="./assets/css/carrossel.css">
         <link rel="stylesheet" href="./assets/css/filmes.css">
         <link rel="stylesheet" href="./assets/css/login.css">
+        <link rel="stylesheet" href="./assets/css/detalhes.css">
+        <link rel="stylesheet" href="./assets/css/filtro.css">
         <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 

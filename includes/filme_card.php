@@ -1,5 +1,5 @@
 
-<div class="col col-3">
+<div class="col-lg-<?=isset($qntd) ? $qntd : 3 ?> col-md-6 col-sm-12">
                     <figure>
                         <!-- se começa primeiro a tag  figure para prossegir com o figcapture  -->
                         <img src="./assets/img/poster/<?=$value['poster'] ?>"
@@ -12,9 +12,12 @@
                             <p class="descricao"><?php echo $value['descricao'] ?></p>
                         </figcaption>
                         <span class="genero">
-                            <label style="<?php echo $value['nome'] ?>">Fantasia</label>
-                            <label style="background-color: #580259;">Drama</label>
-                            <label style="background-color: #D966BA;">Ficção</label>
+                            
+                            <?php foreach ($generosFilmes as $value2) { ?>
+                            <label style="background-color: #<?= $value2['cor'] ?>;"> <?= $value2['nome'] ?> </label>
+
+                            <?php } ?>
+
                         </span>
                     </figure>
                 </div>
