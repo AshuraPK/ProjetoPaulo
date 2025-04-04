@@ -2,12 +2,14 @@
 require './classes/Filmes.php';
 include './includes/header.php';
 
-if ($_SERVER['REQUEST_METHOD'] == 'GET' && !empty($_GET) && $_GET['sair'] == 'true') {
+
+
+if (!empty($_GET) && $_GET['sair'] == 'true') {
     session_destroy();
     header ('location:index.php');
 }
 
-if (empty($_SESSION['id_pessoa']) && !isset($_SESSION) ) {
+if (empty($_SESSION['id_pessoa']) && !isset($_SESSION['id_pessoa']) ) {
     header ('location:usuario-login.php');
 
 }
