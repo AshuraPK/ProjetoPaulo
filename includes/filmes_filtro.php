@@ -1,3 +1,4 @@
+
 <section id="filtroProdutos">
     <main class="container">
         <div class="row">
@@ -22,7 +23,6 @@
                 <?php $qntd = 4;
                 include './includes/filme_lista.php'; ?>
             </div>
-            
         </div>
     </main>
 </section>

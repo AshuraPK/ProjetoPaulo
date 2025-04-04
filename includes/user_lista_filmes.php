@@ -1,15 +1,12 @@
-
 <?php foreach ($resultadoConsultaFilmes as $value) { ?>
-<div class="row desc-filme">
-
+    <div class="row desc-filme">
         <div class="col-12 col-lg-2 col-sm-12 col-md-12 text-center">
             <img src="./assets/img/poster/<?php echo $value['poster'] ?>" alt="" class="desc-foto">
         </div>
 
         <div class="col-12 col-lg-8 col-sm-12 col-md-12 mt-3">
             <h3 class="title"><?php echo $value['nome'] ?></h3>
-            <p class="desc-descricao">
-            <?php echo $value['descricao'] ?>
+            <p class="desc-descricao"><?php echo $value['descricao'] ?>
             </p>
         </div>
 
@@ -25,4 +22,4 @@
         </div>
 
     </div>
-    <?php } ?>
+<?php } ?>

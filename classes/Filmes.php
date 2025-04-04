@@ -1,23 +1,39 @@
 <?php
 
-//classe precisa ter letra maiuscula para identificar que É uma classe 
-class Filmes
+class Filmes 
 {
-    public function exibirListaFilmes($limite =''){
 
-        $dsn = 'mysql:dbname=db_cinebox;host=127.0.0.1';
+    public $conexaoBanco;
+
+    public function __construct() {
+        $dsn = 'mysql:dbname=db_cinebox; host=127.0.0.1';
         $user = 'root';
         $password = '';
+
+        $this->conexaoBanco = new PDO($dsn, $user, $password);
+    }
+
+    public function exibirListarFilmes($limite = '') {
+
         $auxScript = '';
-        $banco = new PDO($dsn, $user, $password);
-      
+
         if (!empty($limite)) {
-        $auxScript = " ORDER BY RAND() LIMIT {$limite}";
+            $auxScript = " ORDER BY RAND() LIMIT {$limite}";
         }
+
+
 
         $script = 'SELECT * FROM tb_filmes' . $auxScript;
 
-      return $banco->query($script)->fetchAll();
+        return $this->conexaoBanco->query($script)->fetchAll();
+
+    }
+
+    public function consultarFilmesById($id_filme) {
+
+        $script = "SELECT * FROM tb_filmes WHERE id = {$id_filme}";
+
+        return $this->conexaoBanco->query($script)->fetch();
     }
 
 }

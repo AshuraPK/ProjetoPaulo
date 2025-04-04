@@ -1,18 +1,15 @@
-<?php 
+<?php
 require './classes/Filmes.php';
-require'./classes/Generos.php';
-//require é uma requisição de importancia, mais importante que meu include  
+require './classes/Generos.php';
 
-$titulo = '';
-include'./includes/header.php';
+$titulo = 'CineBox - Filmes';
+include './includes/header.php';
 
-$filme = new Filmes ();
-$dadosFilmes = $filme->exibirListaFilmes();
+$filme = new Filmes();
+$dadosFilmes = $filme->exibirListarFilmes();
 
-$bob = new Generos();
-$dadosGeneros = $bob->consultarListaGeneros();
+$genero = new Generos();
+$dadosGeneros = $genero->consultarListaGeneros();
 
-include'./includes/filmes_filtro.php';
-include'./includes/footer.php';
-
-?>
+include './includes/filmes_filtro.php';
+include './includes/footer.php';
